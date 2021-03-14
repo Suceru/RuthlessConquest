@@ -1,10 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
-// Type: Game.WebBrowserManager
-// Assembly: RuthlessConquest, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 09ABF203-5B7E-4C78-ACFB-2EE5FE9ADF6E
-// Assembly location: d:\Users\12464\Desktop\Ruthless Conquest\RuthlessConquest.exe
-
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
 

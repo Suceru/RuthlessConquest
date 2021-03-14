@@ -6,6 +6,11 @@ using Engine.Graphics;
 
 namespace Game
 {
+    /// <summary>
+    /// 保护类
+    /// 游戏初始化界面
+    /// 继承:界面
+    /// </summary>
     internal class GameSetupScreen : Screen
     {
         public GameSetupScreen()

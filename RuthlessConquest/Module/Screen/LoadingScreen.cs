@@ -5,6 +5,11 @@ using Engine.Content;
 
 namespace Game
 {
+    /// <summary>
+    /// 保护类
+    /// 正在加载界面
+    /// 继承:界面
+    /// </summary>
     internal class LoadingScreen : Screen
     {
         public LoadingScreen()
