@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6599186F-72BE-4013-A4AF-2E830D339E52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Game</RootNamespace>
+    <AssemblyName>RuthlessConquest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>RuthlessConquest.ico</ApplicationIcon>
+    <StartupObject>Game.Program</StartupObject>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\RuthlessConquest.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>57C2A44AD1620877EA7E0A05837AACB82B5790A5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RuthlessConquest_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Comms">
+      <HintPath>..\..\..\Comms.dll</HintPath>
+    </Reference>
+    <Reference Include="Engine">
+      <HintPath>..\..\..\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game\AnalyticsParameter.cs" />
+    <Compile Include="Game\AStar.cs" />
+    <Compile Include="Game\AverageCountDebugItemAttribute.cs" />
+    <Compile Include="Game\AverageTimeDebugItemAttribute.cs" />
+    <Compile Include="Game\Body.cs" />
+    <Compile Include="Game\BodyGrid.cs" />
+    <Compile Include="Game\BuildConfiguration.cs" />
+    <Compile Include="Game\CancellableProgress.cs" />
+    <Compile Include="Game\CapturePlanetParticleSystem.cs" />
+    <Compile Include="Game\Colors.cs" />
+    <Compile Include="Game\Crc32.cs" />
+    <Compile Include="Game\DebugItemAttribute.cs" />
+    <Compile Include="Game\DebugItemsContainerAttribute.cs" />
+    <Compile Include="Game\DebugMenuItemAttribute.cs" />
+    <Compile Include="Game\Entity.cs" />
+    <Compile Include="Game\EnumsSerializer.cs" />
+    <Compile Include="Game\ExplosionParticleSystem.cs" />
+    <Compile Include="Game\Faction.cs" />
+    <Compile Include="Game\FloatListDebugMenuItemAttribute.cs" />
+    <Compile Include="Game\Fonts.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\GameImage.cs" />
+    <Compile Include="Game\GameLogSink.cs" />
+    <Compile Include="Game\GameMember.cs" />
+    <Compile Include="Game\GuiSize.cs" />
+    <Compile Include="Game\HumanPlayer.cs" />
+    <Compile Include="Game\IntMath.cs" />
+    <Compile Include="Game\LayoutDirection.cs" />
+    <Compile Include="Game\MessageDialogButton.cs" />
+    <Compile Include="Game\Names.cs" />
+    <Compile Include="Game\Order.cs" />
+    <Compile Include="Game\Planet.cs" />
+    <Compile Include="Game\PlanetImage.cs" />
+    <Compile Include="Game\Platform.cs" />
+    <Compile Include="Game\Player.cs" />
+    <Compile Include="Game\PlayerType.cs" />
+    <Compile Include="Game\Profiler.cs" />
+    <Compile Include="Game\Program.cs" />
+    <Compile Include="Game\Progress.cs" />
+    <Compile Include="Game\RandomAIPlayer.cs" />
+    <Compile Include="Game\RunningAverage.cs" />
+    <Compile Include="Game\Satellite.cs" />
+    <Compile Include="Game\Segment2.cs" />
+    <Compile Include="Game\SimplexNoise.cs" />
+    <Compile Include="Game\SortedMultiCollection.cs" />
+    <Compile Include="Game\Sounds.cs" />
+    <Compile Include="Game\Subtexture.cs" />
+    <Compile Include="Game\TextOrientation.cs" />
+    <Compile Include="Game\Textures.cs" />
+    <Compile Include="Game\Version.cs" />
+    <Compile Include="Game\VisualRoute.cs" />
+    <Compile Include="Game\WiseAIPlayer.cs" />
+    <Compile Include="Module\Description\GameDescription.cs" />
+    <Compile Include="Module\Description\PlayerDescription.cs" />
+    <Compile Include="Module\Dialog\BusyDialog.cs" />
+    <Compile Include="Module\Dialog\ConnectingDialog.cs" />
+    <Compile Include="Module\Dialog\CountdownDialog.cs" />
+    <Compile Include="Module\Dialog\Dialog.cs" />
+    <Compile Include="Module\Dialog\Dialogs.cs" />
+    <Compile Include="Module\Dialog\DialogsManager.cs" />
+    <Compile Include="Module\Dialog\FactionSelectionDialog.cs" />
+    <Compile Include="Module\Dialog\GameMenuDialog.cs" />
+    <Compile Include="Module\Dialog\GameResultDialog.cs" />
+    <Compile Include="Module\Dialog\GiftOrderDialog.cs" />
+    <Compile Include="Module\Dialog\ListSelectionDialog.cs" />
+    <Compile Include="Module\Dialog\MessageDialog.cs" />
+    <Compile Include="Module\Dialog\OrderDialog.cs" />
+    <Compile Include="Module\Dialog\TextBoxDialog.cs" />
+    <Compile Include="Module\Dialog\WaitingForPlayersDialog.cs" />
+    <Compile Include="Module\Manager\AnalyticsManager.cs" />
+    <Compile Include="Module\Manager\AudioManager.cs" />
+    <Compile Include="Module\Manager\ClipboardManager.cs" />
+    <Compile Include="Module\Manager\ExceptionManager.cs" />
+    <Compile Include="Module\Manager\MarketplaceManager.cs" />
+    <Compile Include="Module\Manager\MotdManager.cs" />
+    <Compile Include="Module\Manager\MusicManager.cs" />
+    <Compile Include="Module\Manager\NamesManager.cs" />
+    <Compile Include="Module\Manager\PerformanceManager.cs" />
+    <Compile Include="Module\Manager\ProgressManager.cs" />
+    <Compile Include="Module\Manager\ScreenResolutionManager.cs" />
+    <Compile Include="Module\Manager\ScreensManager.cs" />
+    <Compile Include="Module\Manager\SettingsManager.cs" />
+    <Compile Include="Module\Manager\TextureAtlasManager.cs" />
+    <Compile Include="Module\Manager\VersionsManager.cs" />
+    <Compile Include="Module\Manager\WebBrowserManager.cs" />
+    <Compile Include="Module\Manager\WebManager.cs" />
+    <Compile Include="Module\Message\CreateGameMessage.cs" />
+    <Compile Include="Module\Message\GameCreatedMessage.cs" />
+    <Compile Include="Module\Message\GameImageMessage.cs" />
+    <Compile Include="Module\Message\GameJoinedMessage.cs" />
+    <Compile Include="Module\Message\GameListMessage.cs" />
+    <Compile Include="Module\Message\GameStateHashMessage.cs" />
+    <Compile Include="Module\Message\GameStateMessage.cs" />
+    <Compile Include="Module\Message\JoinGameMessage.cs" />
+    <Compile Include="Module\Message\Message.cs" />
+    <Compile Include="Module\Message\PlayerOrdersMessage.cs" />
+    <Compile Include="Module\Message\RefusedMessage.cs" />
+    <Compile Include="Module\Message\ReinforcementsMessageWidget.cs" />
+    <Compile Include="Module\Message\RequestGameImageMessage.cs" />
+    <Compile Include="Module\Message\RequestGameStateMessage.cs" />
+    <Compile Include="Module\Message\StartGameMessage.cs" />
+    <Compile Include="Module\Message\TickMessage.cs" />
+    <Compile Include="Module\Module\BodiesModule.cs" />
+    <Compile Include="Module\Module\CameraModule.cs" />
+    <Compile Include="Module\Module\Module.cs" />
+    <Compile Include="Module\Module\MusicModule.cs" />
+    <Compile Include="Module\Module\PlanetsModule.cs" />
+    <Compile Include="Module\Module\PlayersModule.cs" />
+    <Compile Include="Module\Module\RouteFinderModule.cs" />
+    <Compile Include="Module\Module\SpecialEventsModule.cs" />
+    <Compile Include="Module\Module\StepModule.cs" />
+    <Compile Include="Module\Parameters\GameCreationParameters.cs" />
+    <Compile Include="Module\Particle\Particle.cs" />
+    <Compile Include="Module\Particle\ParticlesModule.cs" />
+    <Compile Include="Module\Particle\ParticleSystem.cs" />
+    <Compile Include="Module\Particle\ParticleSystemBase.cs" />
+    <Compile Include="Module\Screen\CreditsScreen.cs" />
+    <Compile Include="Module\Screen\GameSetupScreen.cs" />
+    <Compile Include="Module\Screen\LoadingScreen.cs" />
+    <Compile Include="Module\Screen\MainMenuScreen.cs" />
+    <Compile Include="Module\Screen\PracticeSetupScreen.cs" />
+    <Compile Include="Module\Screen\Screen.cs" />
+    <Compile Include="Module\Screen\SettingsScreen.cs" />
+    <Compile Include="Module\Ship\Ship.cs" />
+    <Compile Include="Module\Ship\ShipRange.cs" />
+    <Compile Include="Module\Ship\ShipsModule.cs" />
+    <Compile Include="Module\Status\FactionStatus.cs" />
+    <Compile Include="Module\Status\GameState.cs" />
+    <Compile Include="Module\Utils\AnalyticsManagerUtils.cs" />
+    <Compile Include="Module\Utils\CollectionUtils.cs" />
+    <Compile Include="Module\Utils\DrawingUtils.cs" />
+    <Compile Include="Module\Utils\EnumUtils.cs" />
+    <Compile Include="Module\Utils\StringUtils.cs" />
+    <Compile Include="Module\Utils\XmlUtils.cs" />
+    <Compile Include="Module\Widget\AliensAttackMessageWidget.cs" />
+    <Compile Include="Module\Widget\BackgroundWidget.cs" />
+    <Compile Include="Module\Widget\BevelledButtonWidget.cs" />
+    <Compile Include="Module\Widget\BevelledRectangleWidget.cs" />
+    <Compile Include="Module\Widget\BitmapButtonWidget.cs" />
+    <Compile Include="Module\Widget\BoidsWidget.cs" />
+    <Compile Include="Module\Widget\BusyBarWidget.cs" />
+    <Compile Include="Module\Widget\ButtonWidget.cs" />
+    <Compile Include="Module\Widget\CanvasWidget.cs" />
+    <Compile Include="Module\Widget\CheckboxWidget.cs" />
+    <Compile Include="Module\Widget\ClearWidget.cs" />
+    <Compile Include="Module\Widget\ClickableWidget.cs" />
+    <Compile Include="Module\Widget\ContainerWidget.cs" />
+    <Compile Include="Module\Widget\DialogCoverWidget.cs" />
+    <Compile Include="Module\Widget\DragHostWidget.cs" />
+    <Compile Include="Module\Widget\FixedSizePanelWidget.cs" />
+    <Compile Include="Module\Widget\GridPanelWidget.cs" />
+    <Compile Include="Module\Widget\IDragTargetWidget.cs" />
+    <Compile Include="Module\Widget\InterlaceWidget.cs" />
+    <Compile Include="Module\Widget\LabelWidget.cs" />
+    <Compile Include="Module\Widget\LinkWidget.cs" />
+    <Compile Include="Module\Widget\ListPanelWidget.cs" />
+    <Compile Include="Module\Widget\MessagesListWidget.cs" />
+    <Compile Include="Module\Widget\MessageWidget.cs" />
+    <Compile Include="Module\Widget\MotdWidget.cs" />
+    <Compile Include="Module\Widget\PlayerLabelWidget.cs" />
+    <Compile Include="Module\Widget\RectangleWidget.cs" />
+    <Compile Include="Module\Widget\ScrollPanelWidget.cs" />
+    <Compile Include="Module\Widget\SliderWidget.cs" />
+    <Compile Include="Module\Widget\StackPanelWidget.cs" />
+    <Compile Include="Module\Widget\TextBoxWidget.cs" />
+    <Compile Include="Module\Widget\UniformSpacingPanelWidget.cs" />
+    <Compile Include="Module\Widget\ValueBarWidget.cs" />
+    <Compile Include="Module\Widget\Widget.cs" />
+    <Compile Include="Module\Widget\WidgetInput.cs" />
+    <Compile Include="Module\Widget\WidgetInputDevice.cs" />
+    <Compile Include="Module\Widget\Widgets.cs" />
+    <Compile Include="Module\Widget\WidgetsList.cs" />
+    <Compile Include="Module\Widget\WidgetsManager.cs" />
+    <Compile Include="Module\Zip\ZipArchive.cs" />
+    <Compile Include="Module\Zip\ZipArchiveEntry.cs" />
+    <Compile Include="Net\Client.cs" />
+    <Compile Include="Net\GameListScreen.cs" />
+    <Compile Include="Net\GameScreen.cs" />
+    <Compile Include="Net\GameWidget.cs" />
+    <Compile Include="Net\Server.cs" />
+    <Compile Include="Net\ServerConfig.cs" />
+    <Compile Include="Net\ServerDescription.cs" />
+    <Compile Include="Net\ServerGame.cs" />
+    <Compile Include="Net\ServerHumanPlayer.cs" />
+    <Compile Include="Net\ServersManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleJson\IJsonSerializerStrategy.cs" />
+    <Compile Include="SimpleJson\JsonArray.cs" />
+    <Compile Include="SimpleJson\JsonObject.cs" />
+    <Compile Include="SimpleJson\PocoJsonSerializerStrategy.cs" />
+    <Compile Include="SimpleJson\Reflection\ReflectionUtils.cs" />
+    <Compile Include="SimpleJson\SimpleJson.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Content\Content.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
