@@ -107,6 +107,7 @@ namespace Game
                 });
             }
             string s = "rXhjy84BcuQc035F0Qx5n9lanMUEuVSKDoOikYM1Qx3AF9oZDxyeFwAhmACTstkl3Zu3PKumRsYJJ5xUVw53gwTwuwDHIPis7y4jVOqrnZmJujlH00cDmvnLu9uw3LdfH8d9a";
+            //将Content/Content.pak设置为复制到输出目录（始终复制）
             ContentCache.AddPackage("app:Content/Content.pak", Encoding.UTF8.GetBytes(s), new byte[] { 63 });
             MarketplaceManager.Initialize();
             SettingsManager.Initialize();
